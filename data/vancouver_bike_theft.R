@@ -22,7 +22,6 @@ main <- function(){
     select(TYPE,YEAR, MONTH) %>%
     group_by(YEAR,MONTH)%>%
     summarize(n=n())
-  
 }
 
 
