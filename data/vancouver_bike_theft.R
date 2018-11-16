@@ -22,7 +22,7 @@ main <- function(){
     select(TYPE,YEAR, MONTH) %>%
     group_by(YEAR,MONTH)%>%
     summarize(n=n())
-  str(data_all_years_bicycle)
+  
 }
 
 
