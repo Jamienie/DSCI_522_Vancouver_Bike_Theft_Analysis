@@ -23,6 +23,10 @@ main <- function(){
     select(TYPE,YEAR, MONTH) %>%
     group_by(YEAR,MONTH)%>%
     summarize(n=n())
+<<<<<<< HEAD
+  str(data_all_years_bicycle)
+=======
+>>>>>>> upstream/master
 }
 
 
