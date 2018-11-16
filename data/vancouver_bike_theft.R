@@ -14,7 +14,7 @@ library(repr)
 main <- function(){
   
   # read in data
-  data <- read.csv('./data/crime_csv_all_years.csv')
+  data <- read.csv('crime_csv_all_years.csv')
  
   # filter data to `TYPE` = `Theft of Bicycle` only, and group by `MONTH and YEAR`
   data_all_years_bicycle <- data %>% 
@@ -22,6 +22,7 @@ main <- function(){
     select(TYPE,YEAR, MONTH) %>%
     group_by(YEAR,MONTH)%>%
     summarize(n=n())
+  str(data_all_years_bicycle)
 }
 
 
