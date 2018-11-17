@@ -5,6 +5,8 @@ Analysis of bike theft reports in Vancouver between 2003-2017.
 
 * Dataset is of crime data between 2003 and 2017 in Vancouver reported by the Vancouver Police Department.
 Link: https://data.vancouver.ca/datacatalogue/crime-data.htm
+* The original dataset was in csv format. For this project, we will use R to import and handle our data analysis.
+* Imported data can be found [here](https://github.com/UBC-MDS/DSCI_522_Vancouver_Bike_Theft_Analysis/tree/master/script), in the src folder of our repository, and a snippet of it can be found [here](https://github.com/UBC-MDS/DSCI_522_Vancouver_Bike_Theft_Analysis/tree/master/img).
 
 2. With that data set, identify a question you would like to ask from it that could be answered by some simple analysis and visualization (more on this below). State what kind of question it is (it should be one of the 6 types discussed in lecture 1).
 
