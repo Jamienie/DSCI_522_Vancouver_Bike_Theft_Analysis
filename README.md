@@ -2,8 +2,8 @@
 Analysis of bike theft reports in Vancouver between 2003-2017.
 
 ## Team Members:
-Fan Nie
-Mohamad Makkaoui
+* Fan Nie
+* Mohamad Makkaoui
 
 ## Dataset
 
@@ -16,16 +16,16 @@ Link: https://data.vancouver.ca/datacatalogue/crime-data.htm
 
 * Do bicycle thefts peak/increase in the summer months (June,July,August) compared to other months of the year?
 
-* Type:inferential
+* Type: inferential
 
 ## Analysis Plan
 
-* We will define our null and alternative hypotheses (a one-tailed two-group hypothesis) 
+* We will define our null and alternative hypotheses (a one-tailed two-group hypothesis): 
   * Null hypothesis: No difference in bike theft reports between summer months (June,July,August) and the other months of the year.
   * Alternative hypothesis: Higher number of bike theft reports in the summer months when compared to the other months of the year.
 * We will compute a test statistic that corresponds to the null hypothesis.
-* We will generate the simulated data under the model  $H_0$ and calculate the 2.5th and 97.5th quantile of this distribution (which corresponds to a threshold of $\alpha = 0.05$).
-* We will calculate p-value
+* We will generate the simulated data under the model of the null hypothesis and calculate the 2.5th and 97.5th quantile of this distribution (which corresponds to a threshold of 0.05).
+* We will calculate p-value.
 
 ## Summary Presentation
 
