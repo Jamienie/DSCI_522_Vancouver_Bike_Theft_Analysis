@@ -7,8 +7,7 @@ Analysis of bike theft reports in Vancouver between 2003-2017.
 
 ## Dataset
 
-* Dataset is of crime data between 2003 and 2017 in Vancouver reported by the Vancouver Police Department.
-Link: https://data.vancouver.ca/datacatalogue/crime-data.htm
+* The source of the dataset is available publicly on [Vancouver Data](https://data.vancouver.ca/datacatalogue/crime-data.htm). It is crime data between 2003 and 2017 in Vancouver reported by the Vancouver Police Department.
 * The original dataset was in csv format. For this project, we will use R to import and handle our data analysis.
 * Imported data can be found [here](https://github.com/UBC-MDS/DSCI_522_Vancouver_Bike_Theft_Analysis/tree/master/script), in the src folder of our repository, and a snippet of it can be found [here](https://github.com/UBC-MDS/DSCI_522_Vancouver_Bike_Theft_Analysis/tree/master/img).
 
