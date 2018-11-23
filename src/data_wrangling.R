@@ -5,11 +5,9 @@
 # This script cleans the data by filtering the type = "Theft of Bicycle" and years are
 # between 2003 - 2017 (full years).
 
-# # This script takes two arguments: the absolute file path to save the unzipped file into, , and the clean data file path. 
+# # This script takes three arguments: a path pointing to the saved data , a file name pointing to the clean data and a path where to write the clean data file to. 
 #
-# Usage: Rscript data_wrangling.R 
-#        "C:/Users/fanfan/Documents/block3/DSCI_522_project/DSCI_522_Vancouver_Bike_Theft_Analysis/data/crime_csv_all_years.csv"
-#        "C:/Users/fanfan/Documents/block3/DSCI_522_project/DSCI_522_Vancouver_Bike_Theft_Analysis/data/data_all_years_bicycle.csv"  
+# Usage: Rscript data_wrangling.R "./data/crime_csv_all_years.csv" "data_all_years_bicycle" "./data/data_all_years_bicycle.csv"  
 #
 # define main function
 
@@ -18,7 +16,8 @@ library(tidyverse)
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
 file_save <- args[1]
-file_write <- args[2]
+file_name <- args[2]
+file_write <- args[3]
 
 # read the csv file into r
 data <- read.csv(file_save) 
@@ -36,5 +35,5 @@ main <- function(){
 
 
 # call main function and output command
-data_all_years_bicycle <- main()
-write_csv(data_all_years_bicycle, file_write)
+file_name <- main()
+write_csv(file_name, file_write)
