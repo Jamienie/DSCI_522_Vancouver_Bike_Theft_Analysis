@@ -6,7 +6,7 @@
 
 # This script takes two arguments: a path/filename pointing to the data, a path/file name where to write the figure to and what to call it 
 #
-# Usage: Rscript data_viz_exploratory.R "C:/Users/fanfan/Documents/block3/DSCI_522_project/DSCI_522_Vancouver_Bike_Theft_Analysis/data/data_all_years_bicycle.csv"  "C:/Users/fanfan/Documents/block3/DSCI_522_project/DSCI_522_Vancouver_Bike_Theft_Analysis/results/viz_exploratory.png" 
+# Usage: Rscript data_viz_exploratory.R "../data/data_all_years_bicycle.csv"  "../results/viz_exploratory.png" 
 #
 # define main function
 

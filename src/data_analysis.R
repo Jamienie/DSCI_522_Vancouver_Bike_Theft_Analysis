@@ -6,7 +6,7 @@
 
 # This script takes two arguments: a path/filename pointing to the data, a path/filename where to write the file to and what to call it
 #
-# Usage: Rscript data_analysis.R "C:/Users/fanfan/Documents/block3/DSCI_522_project/DSCI_522_Vancouver_Bike_Theft_Analysis/data/data_all_years_bicycle.csv"  "C:/Users/fanfan/Documents/block3/DSCI_522_project/DSCI_522_Vancouver_Bike_Theft_Analysis/results/analysis_summary.csv" 
+# Usage: Rscript data_analysis.R "../data/data_all_years_bicycle.csv"  "../results/analysis_summary.csv" 
 #
 # define main function
 
