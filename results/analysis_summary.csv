@@ -1,0 +1,2 @@
+"","estimate","estimate1","estimate2","statistic","p.value","parameter","conf.low","conf.high","method","alternative"
+"1",-19.302,50.2266666666667,69.5286666666667,-2.72315778057083,0.994406552104932,27.031145695261,-31.3745756950019,Inf,"Welch Two Sample t-test","greater"
