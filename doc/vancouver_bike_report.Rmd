@@ -1,0 +1,31 @@
+---
+title: "Vancouver bike report"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+Introduction
+
+Even in an age of CCTV cameras on every street corner, bike theft remains an issue that continues to plague most modern cities. 
+Vancouver, Canada is no exception and there are often hundreds of bike theft reports every month. The Vancouver Police Department has 
+collected data on bike thefts going back to 2003, with data such as date, time, and location of all bike thefts in the greater Vancouver area.
+Taking only the date data, we will be investigating whether there is a greater incidence of bike thefts in the summer time when compared to the remaining months of the year.
+(Note: for the purposes of the analysis, 'summer time' is chosen as the months June, July, August for simplicity).
+
+There are many possibilities to perform different analyses with this data that can help the VPD and the community fight back against bike theft.
+
+For this analysis, we will be investigating the effect of the time of year on the rate of bike thefts. 
+Our question is as follows: 
+
+Is the mean number of bikes stolen per month in the summer time (June, July, August) greater than the mean number of bikes stolen per month during the other months of the year or is it equally likely. 
+
+Our exploratory variable is a binary variable, ‘summer’ or ‘not summer’ 
+
+Specifically we will be looking at performing a 2-group hypothesis test on the difference in mean bike thefts
+
+
+** Preliminary visualization
