@@ -32,7 +32,7 @@ Using this data, we will be investigating whether there is a greater incidence o
 * Counting the number of bike thefts for each month since 2003
 * Group the months into summer/non-summer
 * Compute difference in means statistic between the summer and non-summer groups using a t-test
-* Accept/Reject null hypothesis based on p-value
+* Accept/Reject null hypothesis based on the p-value
 
 * We will define our null and alternative hypotheses (a one-tailed two-group hypothesis): 
   * Null hypothesis: No difference in bike theft reports between summer months (June,July,August) and the other months of the year.
@@ -50,7 +50,7 @@ Using this data, we will be investigating whether there is a greater incidence o
 ```
 Rscript data_loading.R "ftp://webftp.vancouver.ca/opendata/csv/crime_csv_all_years.zip"   "../data"
 Rscript data_wrangling.R "../data/crime_csv_all_years.csv" "../data/data_all_years_bicycle.csv"
-Rscript data_analysis.R "../data/data_all_years_bicycle.csv"  "../results/analysis_summary.csv" 
+Rscript data_analysis_2.R "../data/data_all_years_bicycle.csv"  "../results/analysis_summary_2.csv" 
 Rscript data_viz_exploratory.R "../data/data_all_years_bicycle.csv"  "../results/viz_exploratory.png"
 Rscript data_viz_final.R "../data/data_all_years_bicycle.csv" "../results/bike_boxplot.png"
 Rscript -e "rmarkdown::render('doc/vancouver_bike_report.Rmd')"
