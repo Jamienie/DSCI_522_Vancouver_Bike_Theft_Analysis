@@ -14,10 +14,12 @@
 library(tidyverse)
 library(ggplot2)
 
+# read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
 file_input <- args[1]
 img_output <- args[2]
 
+# Reads in csv file
 data <- read.csv(file_input)
 
 
