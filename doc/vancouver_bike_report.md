@@ -2,7 +2,7 @@ Vancouver Bike Theft Report
 ================
 Fan Nie, Mohamad Makkaoui
 
-**Introduction**
+## Introduction
 
 Even in an age of CCTV cameras on every street corner, bike theft
 remains an issue that continues to plague most modern cities. Vancouver,
@@ -11,7 +11,7 @@ reports every month. The Vancouver Police Department has collected data
 on bike thefts going back to 2003, with data such as date, time, and
 location of all bike thefts in the greater Vancouver area.
 
-**Question**
+## Question
 
 Taking only the date data, we will be investigating whether there is a
 greater incidence of bike thefts in the summer time when compared to the
@@ -44,7 +44,7 @@ It looks as though there is a hump whenever it approaches summer time
 and a subsequent drop off as the fall begins in almost every year. We
 want to investigate this difference statistically.
 
-**Analysis & Results**
+## Analysis & Results
 
 To test whether there is a statistically significant difference between
 the summer and non-summer groups, we perform a t-test on the difference
@@ -67,7 +67,7 @@ is a higher incidence of bike thefts in the summer time.
 summer and non-summer months. Displayed on each plot are the medians,
 1st/3rd quartiles, min/max, and outliers of each group.
 
-**Conclusion**
+## Conclusion
 
 In the analysis performed above, we show conclusively that there is
 indeed a spike in bike theft report incidence in the summer time going
