@@ -7,7 +7,7 @@
 # This script takes two arguments: a path pointing to the saved data , a path/file name pointing to the clean data 
 # and a path where to write the clean data file to. 
 #
-# Usage: Rscript data_wrangling.R "../data/crime_csv_all_years.csv" "../data/data_all_years_bicycle.csv"  
+# Usage: Rscript data_wrangling.R "../data/crime_csv_all_years.csv" "../results/data_all_years_bicycle.csv"  
 #
 # define main function
 

@@ -7,7 +7,7 @@
 
 # This script takes two arguments: a path/filename pointing to the data, a path/filename where to write the file to and what to call it
 #
-# Usage: Rscript data_analysis.R "../data/data_all_years_bicycle.csv"  "../results/analysis_summary_2.csv"
+# Usage: Rscript data_analysis.R "../results/data_all_years_bicycle.csv"  "../results/analysis_summary_2.csv"
 
 library(tidyverse)
 library(broom)
@@ -23,12 +23,12 @@ my_data <- read.csv(file_input)
 # Defining main function
 main <- function(){
 data_bike_avg <- my_data %>% 
-  mutate(summer = ifelse (MONTH %in% c(6,7,8), "yes","no"))%>%
+  mutate(summer = ifelse (MONTH %in% c(6,7,8), "no","yes"))%>%
     select(n,summer)
 
 analysis <- map_dfr(
   c(TRUE,FALSE),
-  ~ t.test(n ~ summer, data=data_bike_avg, var.equal = .x)%>%
+  ~ t.test(n ~ summer, data=data_bike_avg, alternative="greater", var.equal = .x)%>%
     tidy())%>%
     select(method,statistic,p.value)
 
