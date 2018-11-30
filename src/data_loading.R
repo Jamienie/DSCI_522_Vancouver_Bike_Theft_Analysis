@@ -6,7 +6,7 @@
 #
 # This script takes two arguments: the path to the input file , and a path where to write the file to. 
 #
-# Usage: Rscript data_loading.R "ftp://webftp.vancouver.ca/opendata/csv/crime_csv_all_years.zip"   "../data"
+# Usage: Rscript src/data_loading.R "ftp://webftp.vancouver.ca/opendata/csv/crime_csv_all_years.zip"   "data"
 #
 
 library(tidyverse)

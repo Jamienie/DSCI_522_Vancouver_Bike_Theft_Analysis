@@ -7,7 +7,7 @@
 
 # This script takes two arguments: a path/filename pointing to the data, a path/filename where to write the file to and what to call it
 #
-# Usage: Rscript data_analysis.R "../results/data_all_years_bicycle.csv"  "../results/analysis_summary.csv"
+# Usage: Rscript src/data_analysis.R "results/data_all_years_bicycle.csv"  "results/analysis_summary.csv"
 
 library(tidyverse)
 library(broom)
