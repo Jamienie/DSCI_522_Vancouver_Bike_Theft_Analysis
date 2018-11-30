@@ -24,8 +24,6 @@ data_all_years_bicycle <- read.csv(file_input)
 main <- function(){
   
   p <- data_all_years_bicycle %>% 
-            group_by(YEAR,MONTH) %>%
-            summarise(n=n()) %>% # count the numbers of bicycle thefts reported in each month in each year
             ggplot(aes(MONTH, n)) +
             geom_line() +
             ylab("number of bicycle theft") +
