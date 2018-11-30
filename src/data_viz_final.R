@@ -28,18 +28,17 @@ main <- function(){
 
 alpha <- 0.05  
 
-summer_data <- data_b %>% mutate(Summer=ifelse(MONTH %in% c(6,7,8),"Yes","No"))
-x_map <- c(Yes=1,No=0)
-summer_data <- mutate(summer_data,num_x=x_map[Summer])
+x_map <- c(No=0,Yes=1)
+summer_data <- mutate(data_b,num_x=x_map[summer])
 
 viz <- summer_data %>%
-  group_by(Summer,num_x)%>%
+  group_by(summer,num_x)%>%
   summarise(mean=mean(n),
             total=length(n),
             se=sd(n)/sqrt(total))%>%
   ggplot(aes(x=num_x))+
-  geom_violin(data=summer_data,mapping=aes(group=Summer,y=n))+
-  geom_jitter(data=summer_data,mapping=aes(group=Summer,y=n),alpha=0.6,width=0.2,size=0.7)+
+  geom_violin(data=summer_data,mapping=aes(group=summer,y=n))+
+  geom_jitter(data=summer_data,mapping=aes(group=summer,y=n),alpha=0.6,width=0.2,size=0.7)+
   geom_point(aes(y=mean),color="red")+
   geom_errorbar(aes(ymin=mean+qnorm(alpha/2)*se,
                     ymax=mean-qnorm(alpha/2)*se,
@@ -52,11 +51,6 @@ viz <- summer_data %>%
   theme_bw()+
   theme(legend.position = "none")
 
-#%>%
-#  mutate(SUMMER=ifelse(MONTH %in% c(6,7,8),"Yes","No")) %>%
-#  ggplot(aes(SUMMER,n))+
-#  geom_boxplot()+
-#    ylab("Number of bikes thefts reported per month")
 ggsave(img_output, viz, device = "png")
 
 }

@@ -16,7 +16,7 @@ Using this data, we will be investigating whether there is a greater incidence o
 
 * The source of the dataset is available publicly on [Vancouver Open Data Catalogue](https://data.vancouver.ca/datacatalogue/crime-data.htm). It is crime data in Vancouver from 2003 till present (updated every Sunday morning) reported by the Vancouver Police Department. The dataset we use is as of November 16,2018.
 * The original dataset was in csv format. For this project, we will use R to import and handle our data analysis.
-* Imported data can be found [here](https://github.com/UBC-MDS/DSCI_522_Vancouver_Bike_Theft_Analysis/tree/master/script), in the src folder of our repository, and a snippet of it can be found [here](https://github.com/UBC-MDS/DSCI_522_Vancouver_Bike_Theft_Analysis/tree/master/img).
+* Imported data can be found [here](https://github.com/UBC-MDS/DSCI_522_Vancouver_Bike_Theft_Analysis/tree/master/src), in the src folder of our repository.
 
 ## Question
 
@@ -27,21 +27,6 @@ Using this data, we will be investigating whether there is a greater incidence o
 * Number of bikes stolen per month: Continuous
 * Summer/Not Summer: Categorical
 
-## Analysis Plan
-
-* Counting the number of bike thefts for each month since 2003
-* Group the months into summer/non-summer
-* Compute difference in means statistic between the summer and non-summer groups using a t-test
-* Accept/Reject null hypothesis based on the p-value
-
-* We will define our null and alternative hypotheses (a one-tailed two-group hypothesis): 
-  * Null hypothesis: No difference in bike theft reports between summer months (June,July,August) and the other months of the year.
-  * Alternative hypothesis: Higher number of bike theft reports in the summer months when compared to the other months of the year.
-
-## Visualization
-- Visualize exploratory line graph, Month vs. Number of thefts for all years from 2003 to 2017
-- Box plot showing the median, first/third quartile, min/max and outliers
-
 ## Usage
 
 1. Clone this repo, navigate to the root of the project
@@ -49,10 +34,10 @@ Using this data, we will be investigating whether there is a greater incidence o
 
 ```
 Rscript data_loading.R "ftp://webftp.vancouver.ca/opendata/csv/crime_csv_all_years.zip"   "../data"
-Rscript data_wrangling.R "../data/crime_csv_all_years.csv" "../results/data_bicycle.csv"
-Rscript data_analysis.R "../results/data_bicycle.csv"  "../results/analysis_summary.csv" 
-Rscript data_viz_exploratory.R "../results/data_bicycle.csv"  "../results/figures/viz_exploratory.png"
-Rscript data_viz_final.R "../results/data_bicycle.csv" "../results/figures/bike_boxplot.png"
+Rscript data_wrangling.R "../data/crime_csv_all_years.csv" "../results/data_all_years_bicycle.csv"
+Rscript data_analysis.R "../results/data_all_years_bicycle.csv"  "../results/analysis_summary.csv" 
+Rscript data_viz_exploratory.R "../results/data_all_years_bicycle.csv"  "../results/figures/viz_exploratory.png"
+Rscript data_viz_final.R "../results/data_all_years_bicycle.csv" "../results/figures/bike_boxplot.png"
 Rscript -e "rmarkdown::render('../doc/vancouver_bike_report.Rmd')"
 ```
 
