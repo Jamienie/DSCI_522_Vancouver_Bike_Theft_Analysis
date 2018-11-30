@@ -45,10 +45,12 @@ viz <- summer_data %>%
                     ymax=mean-qnorm(alpha/2)*se,
                     color="red",
                     width=0.1))+
-  labs(x="Is it summer?",
+  labs(x="Is it summer in Vancouver?",
        y="Number of bikes stolen per month")+
   scale_x_continuous(breaks=enframe(x_map)$value,
-                     labels=enframe(x_map)$name)
+                     labels=enframe(x_map)$name)+
+  theme_bw()+
+  theme(legend.position = "none")
 
 #%>%
 #  mutate(SUMMER=ifelse(MONTH %in% c(6,7,8),"Yes","No")) %>%

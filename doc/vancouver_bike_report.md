@@ -21,23 +21,27 @@ simplicity).
 
 Our question is as follows:
 
-Is the mean number of bikes stolen per month in the summer time (June,
-July, August) greater than the mean number of bikes stolen per month
-during the other months of the year or is it equally likely.
+Is the mean number of bikes stolen per month in the **summer time**
+(June, July, August) *greater* than the mean number of bikes stolen per
+month during the **other months of the year** or is it equally likely.
 
 We will define our null and alternative hypotheses (a one-tailed
-two-group hypothesis): \* Null hypothesis: No difference in bike theft
-reports between summer months (June,July,August) and the other months of
-the year. \* Alternative hypothesis: Higher number of bike theft reports
-in the summer months when compared to the other months of the year.
+two-group hypothesis):
 
-Our exploratory variable is a binary variable, ‘summer’ or ‘not summer’
+  - Null hypothesis \(H_0\): No difference in bike theft reports between
+    summer months (June,July,August) and the other months of the year.
+
+  - Alternative hypothesis \(H_A\): Higher number of bike theft reports
+    in the summer months when compared to the other months of the year.
+
+Our exploratory variable is a binary variable, **‘Summer’** or **‘Not
+Summer’**
 
 First, we want to plot the months of the year vs the number of bike
 thefts per month. As we have data over 14 years, the plot will be
 facetted by year.
 
-![alt tag](../results/viz_exploratory.png) **Figure 1**: Month
+![alt tag](../results/figures/viz_exploratory.png) **Figure 1**: Month
 vs. Number of bike thefts per month over 15 years
 
 It looks as though there is a hump whenever it approaches summer time
@@ -61,11 +65,11 @@ p-value is infinitesmally small (Results can be seen in
 hypothesis and say with an extremely high level of confidence that there
 is a higher incidence of bike thefts in the summer time.
 
-![alt tag](../results/bike_boxplot.png)
+![alt tag](../results/figures/bike_boxplot.png)
 
-**Figure 2**: Box plot comparing the number of reported bike thefts for
-summer and non-summer months. Displayed on each plot are the medians,
-1st/3rd quartiles, min/max, and outliers of each group.
+**Figure 2**: Jitter/Violin plot comparing the number of reported bike
+thefts for summer and non-summer months. Displayed on each plot are the
+medians, 1st/3rd quartiles, min/max, and outliers of each group.
 
 ## Conclusion
 

@@ -49,11 +49,11 @@ Using this data, we will be investigating whether there is a greater incidence o
 
 ```
 Rscript data_loading.R "ftp://webftp.vancouver.ca/opendata/csv/crime_csv_all_years.zip"   "../data"
-Rscript data_wrangling.R "../data/crime_csv_all_years.csv" "../data/data_all_years_bicycle.csv"
-Rscript data_analysis_2.R "../data/data_all_years_bicycle.csv"  "../results/analysis_summary_2.csv" 
-Rscript data_viz_exploratory.R "../data/data_all_years_bicycle.csv"  "../results/viz_exploratory.png"
-Rscript data_viz_final.R "../data/data_all_years_bicycle.csv" "../results/bike_boxplot.png"
-Rscript -e "rmarkdown::render('doc/vancouver_bike_report.Rmd')"
+Rscript data_wrangling.R "../data/crime_csv_all_years.csv" "../results/data_bicycle.csv"
+Rscript data_analysis.R "../results/data_bicycle.csv"  "../results/analysis_summary.csv" 
+Rscript data_viz_exploratory.R "../results/data_bicycle.csv"  "../results/figures/viz_exploratory.png"
+Rscript data_viz_final.R "../results/data_bicycle.csv" "../results/figures/bike_boxplot.png"
+Rscript -e "rmarkdown::render('../doc/vancouver_bike_report.Rmd')"
 ```
 
 ## Dependencies

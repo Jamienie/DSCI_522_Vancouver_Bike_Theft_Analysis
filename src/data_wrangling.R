@@ -26,7 +26,10 @@ main <- function(){
    # filter data to `TYPE` = `Theft of Bicycle` only, and years are between 2003 and 2017.
   f <- data %>% 
     filter(TYPE == "Theft of Bicycle" & YEAR %in% (2003:2017)) %>%
-    select(TYPE,YEAR,MONTH) # only look at the TYPE, YEAR, MONTH columns for the purpose of this project
+    group_by(YEAR,MONTH) %>%
+    summarise(n=n())%>%
+    mutate(summer = ifelse (MONTH %in% c(6,7,8), "Yes","No"))%>%
+    select(YEAR,MONTH,n,summer) # only look at the TYPE, YEAR, MONTH columns for the purpose of this project
   
   write_csv(f, file_write)
   
