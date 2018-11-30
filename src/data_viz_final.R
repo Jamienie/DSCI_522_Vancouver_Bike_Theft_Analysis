@@ -9,7 +9,7 @@
 # data, a path/file name where to write the figure to and what to 
 # call it 
 
-#Usage: Rscript data_viz_final.R "../results/data_all_years_bicycle.csv" "../results/figures/bike_boxplot.png"
+#Usage: Rscript src/data_viz_final.R "results/data_all_years_bicycle.csv" "results/figures/bike_boxplot.png"
 
 library(tidyverse)
 library(ggplot2)

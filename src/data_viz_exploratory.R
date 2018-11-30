@@ -6,7 +6,7 @@
 
 # This script takes two arguments: a path/filename pointing to the data, a path/file name where to write the figure to and what to call it 
 #
-# Usage: Rscript data_viz_exploratory.R "../results/data_all_years_bicycle.csv"  "../results/figures/viz_exploratory.png" 
+# Usage: Rscript src/data_viz_exploratory.R "results/data_all_years_bicycle.csv"  "results/figures/viz_exploratory.png" 
 #
 # define main function
 
@@ -27,7 +27,8 @@ main <- function(){
             ggplot(aes(MONTH, n)) +
             geom_line() +
             ylab("Number of bicycle thefts per month") +
-            facet_wrap(~ YEAR, scales = "free", ncol = 3)
+            facet_wrap(~ YEAR, scales = "free", ncol = 3) +
+            scale_x_continuous(labels = scales::number_format(accuracy = 1))
   ggsave(img_output, p, device = "png")
 }
 
