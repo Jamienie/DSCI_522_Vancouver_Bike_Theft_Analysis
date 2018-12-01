@@ -30,6 +30,7 @@ main <- function(){
             theme(strip.background =element_rect(fill="green")) +
             ylab("Number of bicycle thefts per month") +
             facet_wrap(~ YEAR, scales = "free", ncol = 3) +
+            theme(strip.text = element_text(colour = 'black'))+
             scale_x_continuous(labels = scales::number_format(accuracy = 1))
   ggsave(img_output, p, device = "png" )
 }
