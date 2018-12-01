@@ -22,7 +22,7 @@ We will define our null and alternative hypotheses (a one-tailed two-group hypot
 
 -   Alternative hypothesis *H*<sub>*A*</sub>: Higher number of bike theft reports in the summer months when compared to the other months of the year.
 
-Our exploratory variable is a binary variable, **âSummerâ** or **âNot Summerâ**
+Our exploratory variable is a binary variable, **â€˜Summerâ€™** or **â€˜Not Summerâ€™**
 
 First, we want to plot the months of the year vs the number of bike thefts per month. As we have data over 14 years, the plot will be facetted by year.
 
