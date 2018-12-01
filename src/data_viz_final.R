@@ -11,8 +11,8 @@
 
 #Usage: Rscript src/data_viz_final.R "results/data_all_years_bicycle.csv" "results/figures/bike_boxplot.png"
 
-library(tidyverse)
-library(ggplot2)
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(ggplot2))
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)

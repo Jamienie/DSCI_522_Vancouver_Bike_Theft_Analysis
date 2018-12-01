@@ -9,7 +9,7 @@
 #
 # Usage: Rscript src/data_analysis.R "results/data_all_years_bicycle.csv"  "results/analysis_summary.csv"
 
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 library(broom)
 
 # read in command line arguments

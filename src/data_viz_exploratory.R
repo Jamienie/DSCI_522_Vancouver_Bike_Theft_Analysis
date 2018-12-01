@@ -10,8 +10,8 @@
 #
 # define main function
 
-library(tidyverse)
-library(ggplot2)
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(ggplot2))
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
