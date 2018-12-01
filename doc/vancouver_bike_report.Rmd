@@ -45,7 +45,7 @@ It looks as though there is a hump whenever it approaches summer time and a subs
 To test whether there is a statistically significant difference between the summer and non-summer groups, we perform a t-test on the difference in means between the two groups.
 
 ```{r include=FALSE}
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 ```
 
 ```{r echo=FALSE}
