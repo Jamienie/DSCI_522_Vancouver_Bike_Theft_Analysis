@@ -6,7 +6,7 @@
 
 # This script takes two arguments: a path/filename pointing to the data, a path/file name where to write the figure to and what to call it 
 #
-# Usage: Rscript data_viz_exploratory.R "../data/data_all_years_bicycle.csv"  "../results/viz_exploratory.png" 
+# Usage: Rscript src/data_viz_exploratory.R "results/data_all_years_bicycle.csv"  "results/figures/viz_exploratory.png" 
 #
 # define main function
 
@@ -24,12 +24,11 @@ data_all_years_bicycle <- read.csv(file_input)
 main <- function(){
   
   p <- data_all_years_bicycle %>% 
-            group_by(YEAR,MONTH) %>%
-            summarise(n=n()) %>% # count the numbers of bicycle thefts reported in each month in each year
             ggplot(aes(MONTH, n)) +
             geom_line() +
-            ylab("number of bicycle theft") +
-            facet_wrap(~ YEAR, scales = "free", ncol = 3)
+            ylab("Number of bicycle thefts per month") +
+            facet_wrap(~ YEAR, scales = "free", ncol = 3) +
+            scale_x_continuous(labels = scales::number_format(accuracy = 1))
   ggsave(img_output, p, device = "png")
 }
 
