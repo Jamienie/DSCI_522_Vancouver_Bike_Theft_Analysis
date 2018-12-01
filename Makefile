@@ -20,26 +20,26 @@ data/crime_csv_all_years.csv : $(ftp://webftp.vancouver.ca/opendata/csv/crime_cs
 	Rscript src/data_loading.R ftp://webftp.vancouver.ca/opendata/csv/crime_csv_all_years.zip data
 
 # 2. data wrangling
-results/data_all_years_bicycle.csv : data/crime_csv_all_years.csv results/data_all_years_bicycle.csv
+results/data_all_years_bicycle.csv : data/crime_csv_all_years.csv src/data_wrangling.R
 	Rscript src/data_wrangling.R data/crime_csv_all_years.csv results/data_all_years_bicycle.csv
 
 # 3. exploratory visualization generation
-results/figures/viz_exploratory.png : results/data_all_years_bicycle.csv results/figures/viz_exploratory.png
+results/figures/viz_exploratory.png : results/data_all_years_bicycle.csv src/data_viz_exploratory.R
 	Rscript src/data_viz_exploratory.R results/data_all_years_bicycle.csv  results/figures/viz_exploratory.png
 
 # 4. data analysis
-results/analysis_summary.csv : results/data_all_years_bicycle.csv  results/analysis_summary.csv
+results/analysis_summary.csv : results/data_all_years_bicycle.csv  src/data_analysis.R
 	Rscript src/data_analysis.R results/data_all_years_bicycle.csv  results/analysis_summary.csv
 
 # 5. final visualization generation
-results/figures/bike_boxplot.png : results/data_all_years_bicycle.csv results/figures/bike_boxplot.png
+results/figures/bike_boxplot.png : results/data_all_years_bicycle.csv src/data_viz_final.R
 	Rscript src/data_viz_final.R results/data_all_years_bicycle.csv results/figures/bike_boxplot.png
 
 #####################################
 # Generate report
 #####################################
 
-doc/vancouver_bike_report.md : doc/vancouver_bike_report.Rmd results/figures/viz_exploratory.png results/figures/bike_boxplot.png
+doc/vancouver_bike_report.md : doc/vancouver_bike_report.Rmd results/figures/viz_exploratory.png results/figures/bike_boxplot.png results/analysis_summary.csv
 	Rscript -e "rmarkdown::render('doc/vancouver_bike_report.Rmd')"
 
 #####################################

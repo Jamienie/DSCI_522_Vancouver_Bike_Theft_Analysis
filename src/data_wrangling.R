@@ -12,7 +12,6 @@
 # define main function
 
 library(tidyverse)
-library(forcats)
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)

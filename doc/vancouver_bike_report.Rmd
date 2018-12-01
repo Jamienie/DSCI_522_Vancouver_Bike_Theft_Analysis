@@ -44,10 +44,16 @@ It looks as though there is a hump whenever it approaches summer time and a subs
 
 To test whether there is a statistically significant difference between the summer and non-summer groups, we perform a t-test on the difference in means between the two groups.
 
-|Method   | Statistic  | p Value   |
-|---|---|---|
-| Two Sample t-test  | -10.5  | 2.17 x 10^-20  |
-| Welch Two Sample t-test  | -8.88  | 1.73 x 10^-12   |
+```{r include=FALSE}
+library(tidyverse)
+```
+
+```{r echo=FALSE}
+summary <- read.csv("results/analysis_summary.csv")
+summary <- summary %>%
+  select("t statistic" = statistic, p.value, method, alternative)
+print(summary)
+```
 
 If we assume that the two groups variance is equal or different, the p-value is infinitesmally small (Results can be seen in `results/analysis_summary.csv`). Thus we can easily reject the null hypothesis and say with an extremely high level of confidence that there is a higher incidence of bike thefts in the summer time.
 
