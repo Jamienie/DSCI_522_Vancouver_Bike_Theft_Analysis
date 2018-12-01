@@ -27,6 +27,7 @@ main <- function(){
             ggplot(aes(MONTH, n)) +
             geom_line() +
             theme_light()+
+            theme(strip.background =element_rect(fill="green")) +
             ylab("Number of bicycle thefts per month") +
             facet_wrap(~ YEAR, scales = "free", ncol = 3) +
             scale_x_continuous(labels = scales::number_format(accuracy = 1))
