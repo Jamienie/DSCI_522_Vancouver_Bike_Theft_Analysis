@@ -36,7 +36,7 @@ viz <- summer_data %>%
   summarise(mean=mean(n),
             total=length(n),
             se=sd(n)/sqrt(total))%>%
-  ggplot(aes(x=num_x))+
+  ggplot(aes(x=num_x, color = summer))+
   geom_violin(data=summer_data,mapping=aes(group=summer,y=n))+
   geom_jitter(data=summer_data,mapping=aes(group=summer,y=n),alpha=0.6,width=0.2,size=0.7)+
   geom_point(aes(y=mean),color="red")+
