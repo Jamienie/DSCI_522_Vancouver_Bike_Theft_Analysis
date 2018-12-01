@@ -11,7 +11,7 @@
 #
 # define main function
 
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)

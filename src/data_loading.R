@@ -9,7 +9,7 @@
 # Usage: Rscript src/data_loading.R "ftp://webftp.vancouver.ca/opendata/csv/crime_csv_all_years.zip"   "data"
 #
 
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
