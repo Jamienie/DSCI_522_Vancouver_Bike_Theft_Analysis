@@ -42,7 +42,6 @@ viz <- summer_data %>%
   geom_point(aes(y=mean),color="red")+
   geom_errorbar(aes(ymin=mean+qnorm(alpha/2)*se,
                     ymax=mean-qnorm(alpha/2)*se,
-                    color="red",
                     width=0.1))+
   labs(x="Is it summer in Vancouver?",
        y="Number of bikes stolen per month")+
