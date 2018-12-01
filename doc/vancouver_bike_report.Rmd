@@ -23,7 +23,7 @@ We make a few assumptions for the purposes of simplicity in the analysis. First,
 
 As part of our preliminary exploration, we wanted to look at the number of bike thefts per month against time for as long back as the data goes. This would help identify any trends or changes in the number of bike thefts that could be attributed to a particular time frame. So we plotted the months of the year vs the number of bike thefts per month, and facetted by year for 15 years.
 
-```{r, out.width="80%",include=TRUE,echo=FALSE}
+```{r, out.width="60%",include=TRUE,echo=FALSE}
 knitr::include_graphics("../results/figures/viz_exploratory.png")
 ```
 
@@ -61,7 +61,7 @@ print(summary)
 
 As we can see from the summary table above, the p-value is infinitesmally small. Thus the null hypothesis is rejected and we can say with confidence that there is a higher incidence of bike thefts in the summer time. Figure 2 below highlights the differences between the two groups.
 
-```{r, out.width="80%",include=TRUE,echo=FALSE}
+```{r, out.width="60%",include=TRUE,echo=FALSE}
 knitr::include_graphics("../results/figures/bike_boxplot.png")
 ```
 
