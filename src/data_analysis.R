@@ -7,7 +7,7 @@
 
 # This script takes two arguments: a path/filename pointing to the data, a path/filename where to write the file to and what to call it
 #
-# Usage: Rscript src/data_analysis.R "results/data_all_years_bicycle.csv"  "results/analysis_summary.csv" "results/figures/summary_table.png"
+# Usage: Rscript src/data_analysis.R "results/data_all_years_bicycle.csv"  "results/analysis_summary.csv"
 
 library(tidyverse)
 library(broom)
@@ -16,7 +16,6 @@ library(broom)
 args <- commandArgs(trailingOnly = TRUE)
 file_input <- args[1]
 summary_output <- args[2]
-summary_png_output <- args[3]
 
 # reading data
 my_data <- read.csv(file_input)
