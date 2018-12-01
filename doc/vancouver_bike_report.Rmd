@@ -13,15 +13,11 @@ knitr::opts_knit$set(root.dir = here::here())
 
 Even in an age of CCTV cameras on every street corner, bike theft remains an issue that continues to plague most modern cities. Vancouver, Canada is no exception and there are often hundreds of bike theft reports every month. The Vancouver Police Department has collected thorough data on bike thefts, with information on date, time, and location of all bike thefts in the greater Vancouver area going back to 2003. We looked at this data and analyzed it in an attempt to uncover insights about this phenomenon that may potentially help tackle and reduce bike theft in the region.
 
-## Question
+## Objective
 
-Our objective is straightforward, taking only the date information, we are investigating whether there is a greater incidence of bike thefts in the summer time when compared to the remaining months of the year.
+Our question is straightforward, taking only the date information, we are investigating whether there is a greater incidence of bike thefts in the summer time when compared to the remaining months of the year.
 
-Note: We make a few assumptions for the purposes of simplicity in the analysis. First, 'summer time' is chosen as the months June, July, August as these months are months with the least precipitation and a time when people are generally outdoors in Vancouver. We also assume that the bike thefts that are reported are representative of the actual number of bikes stolen.
-
-Our question is as follows: 
-
-Is the mean number of bikes stolen per month in the **summer time** (June, July, August) *greater* than the mean number of bikes stolen per month during the **other months of the year** or is it equally likely. 
+We make a few assumptions for the purposes of simplicity in the analysis. First, 'summer time' is chosen as the months June, July, August as these months are months with the least precipitation and a time when people are generally outdoors in Vancouver. We also assume that the bike thefts that are reported are representative of the actual number of bikes stolen.
 
 ## Exploratory Data Analysis
 
@@ -37,7 +33,11 @@ Looking at Figure 1 above, it appears as though there is a non-negligible hump a
 
 ## Analysis & Results
 
-We wanted to investigate this difference is statistically significant. So we defined our null and alternative hypotheses (a one-tailed two-group hypothesis) as: 
+We wanted to investigate this difference is statistically significant. Our question became the following: 
+
+Is the mean number of bikes stolen per month in the **summer time** (June, July, August) *greater* than the mean number of bikes stolen per month during the **other months of the year** or are they equal?
+
+So we defined our null and alternative hypotheses (a one-tailed two-group hypothesis) as: 
 
   * Null hypothesis $H_0$: No difference in bike theft reports between summer months (June,July,August) and the other months of the year.
   
@@ -45,7 +45,7 @@ We wanted to investigate this difference is statistically significant. So we def
 
 Our exploratory variable is the binary variable, **‘Summer’** or **‘Not Summer’** 
 
-To test whether there is a statistically significant difference between the summer and non-summer groups, we used a t-test on the difference in means between the two groups. We assume the variances between the two groups are not equal.
+To test whether there is a statistically significant difference between the summer and non-summer groups, we used a **t-test** on the difference in means between the two groups. We assume the variances between the two groups are not equal.
 
 ```{r include=FALSE}
 suppressPackageStartupMessages(library(tidyverse))

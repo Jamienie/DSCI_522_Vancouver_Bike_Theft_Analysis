@@ -14,24 +14,18 @@ location of all bike thefts in the greater Vancouver area going back to
 insights about this phenomenon that may potentially help tackle and
 reduce bike theft in the region.
 
-## Question
+## Objective
 
-Our objective is straightforward, taking only the date information, we
+Our question is straightforward, taking only the date information, we
 are investigating whether there is a greater incidence of bike thefts in
 the summer time when compared to the remaining months of the year.
 
-Note: We make a few assumptions for the purposes of simplicity in the
+We make a few assumptions for the purposes of simplicity in the
 analysis. First, ‘summer time’ is chosen as the months June, July,
 August as these months are months with the least precipitation and a
 time when people are generally outdoors in Vancouver. We also assume
 that the bike thefts that are reported are representative of the actual
 number of bikes stolen.
-
-Our question is as follows:
-
-Is the mean number of bikes stolen per month in the **summer time**
-(June, July, August) *greater* than the mean number of bikes stolen per
-month during the **other months of the year** or is it equally likely.
 
 ## Exploratory Data Analysis
 
@@ -53,6 +47,12 @@ subsequent drop off as the fall begins.
 ## Analysis & Results
 
 We wanted to investigate this difference is statistically significant.
+Our question became the following:
+
+Is the mean number of bikes stolen per month in the **summer time**
+(June, July, August) *greater* than the mean number of bikes stolen per
+month during the **other months of the year** or are they equal?
+
 So we defined our null and alternative hypotheses (a one-tailed
 two-group hypothesis) as:
 
@@ -66,8 +66,8 @@ Our exploratory variable is the binary variable, **‘Summer’** or **‘Not
 Summer’**
 
 To test whether there is a statistically significant difference between
-the summer and non-summer groups, we used a t-test on the difference in
-means between the two groups. We assume the variances between the two
+the summer and non-summer groups, we used a **t-test** on the difference
+in means between the two groups. We assume the variances between the two
 groups are not equal.
 
     ##   t statistic      p.value                  method alternative
