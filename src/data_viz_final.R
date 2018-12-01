@@ -37,7 +37,7 @@ viz <- summer_data %>%
             total=length(n),
             se=sd(n)/sqrt(total))%>%
   ggplot(aes(x=num_x))+
-  geom_violin(data=summer_data,mapping=aes(group=summer,y=n))+
+  geom_violin(data=summer_data,mapping=aes(group=summer,y=n, color = "blue"))+
   geom_jitter(data=summer_data,mapping=aes(group=summer,y=n),alpha=0.6,width=0.2,size=0.7)+
   geom_point(aes(y=mean),color="red")+
   geom_errorbar(aes(ymin=mean+qnorm(alpha/2)*se,

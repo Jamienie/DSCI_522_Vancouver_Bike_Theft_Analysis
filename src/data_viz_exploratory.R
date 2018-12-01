@@ -25,11 +25,11 @@ main <- function(){
   
   p <- data_all_years_bicycle %>% 
             ggplot(aes(MONTH, n)) +
-            geom_line() +
+            geom_line(aes(color = YEAR)) +
             ylab("Number of bicycle thefts per month") +
             facet_wrap(~ YEAR, scales = "free", ncol = 3) +
             scale_x_continuous(labels = scales::number_format(accuracy = 1))
-  ggsave(img_output, p, device = "png", height = 6 , width = 6 )
+  ggsave(img_output, p, device = "png" )
 }
 
 
