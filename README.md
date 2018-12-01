@@ -51,7 +51,7 @@ Rscript -e "rmarkdown::render('../doc/vancouver_bike_report.Rmd')"
 
 ## Dependency Diagram
 
-![Dependency Diagram]("doc/dependency_diagram.png")
+![Dependency Diagram](doc/dependency_diagram.png)
 
 ## Dependencies
 - R 3.5.1 & libraries:
