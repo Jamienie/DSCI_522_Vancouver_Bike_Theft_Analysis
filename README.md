@@ -35,10 +35,11 @@ Full report can be found here:
 
 ## Dependencies
 - R 3.5.1 & libraries:
-	- 'rmarkdown==1.10'
-	- 'here==0.1.11'
-	- 'knitr==1.20'
-	- 'ggplot2==3.0.0'
-	- 'tidyverse==1.2.1'
-	- 'broom==0.5.0'
-	- 'forcats==0.3.0'
+| Library | Version|
+|---------|--------|
+| "rmarkdown" | "1.10" |
+| "here" | "0.1.11" |
+| "knitr" | "1.20" |
+| "ggplot2" | "3.0.0" |
+| "tidyverse" | "1.2.1" |
+| "broom" | "0.5.0" |
