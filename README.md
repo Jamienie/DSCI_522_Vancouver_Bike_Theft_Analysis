@@ -35,6 +35,7 @@ Full report can be found here:
 
 ## Dependencies
 - R 3.5.1 & libraries:
+
 | Library | Version|
 |---------|--------|
 | "rmarkdown" | "1.10" |
