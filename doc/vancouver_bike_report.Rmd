@@ -11,7 +11,7 @@ knitr::opts_knit$set(root.dir = here::here())
 
 ## Introduction
 
-Even in an age of CCTV cameras on every street corner, bike theft remains an issue that continues to plague most modern cities. Vancouver, Canada is no exception and there are often hundreds of bike theft reports every month. The Vancouver Police Department has collected thorough data on bike thefts, with information on date, time, and location of all bike thefts in the greater Vancouver area going back to 2003. We looked at this data and analyzed it in an attempt to uncover insights about this phenomenon that may potentially help tackle and reduce bike theft in the region.
+Even in an age of CCTV cameras on every street corner, bike theft remains an issue that continues to plague most modern cities. Vancouver, Canada is no exception and there are often hundreds of bike theft reports every month [1]. The Vancouver Police Department has collected thorough data on bike thefts, with information on date, time, and location of all bike thefts in the greater Vancouver area going back to 2003 [2]. We looked at this data and analyzed it in an attempt to uncover insights about this phenomenon that may potentially help tackle and reduce bike theft in the region.
 
 ## Objective
 
@@ -33,7 +33,7 @@ Looking at Figure 1 above, it appears as though there is a non-negligible hump a
 
 ## Analysis & Results
 
-We wanted to investigate this difference is statistically significant. Our question became the following: 
+We wanted to investigate whether this difference is statistically significant. Our question became the following: 
 
 Is the mean number of bikes stolen per month in the **summer time** (June, July, August) *greater* than the mean number of bikes stolen per month during the **other months of the year** or are they equal?
 
@@ -53,13 +53,14 @@ suppressPackageStartupMessages(library(tidyverse))
 
 ```{r echo=FALSE}
 summary <- read.csv("results/analysis_summary.csv")
-summary <- summary %>%
-  select("t statistic" = statistic, p.value, method, alternative)
-print(summary)
+#summary <- summary %>%
+#  select("t statistic" = statistic, p.value, method, alternative)
+knitr::kable(x=summary[2:10],row.names = FALSE)
 ```
+
 **Table 1**: Summary of t-test results
 
-As we can see from the summary table above, the p-value is infinitesmally small. Thus the null hypothesis is rejected and we can say with confidence that there is a higher incidence of bike thefts in the summer time. Figure 2 below highlights the differences between the two groups.
+As we can see from the summary table above, the difference in the mean estimates between the groups is substantially large. The p-value is infinitesmally small, and the null hypothesis is rejected. Thus, we can conclude with confidence that there is a higher incidence of bike thefts in the summer time. Figure 2 below highlights the differences between the two groups.
 
 ```{r, out.width="60%",include=TRUE,echo=FALSE}
 knitr::include_graphics("../results/figures/bike_boxplot.png")
@@ -74,3 +75,9 @@ In the analysis performed above, we show conclusively that there is indeed a spi
 ## Future Scope
 
 To make this analysis better and more thorough/useful, we can compound datetime data with location data to pinpoint exactly the locations and time of day/year where the risk of bike thefts is highest. This could help the VPD alert locals and help protect people's property.
+
+## References
+
+1. Robinson, Matt. (2018). *Bike thieves target UBC students at start of school year* [Online], vancouversun.com. Available at: https://vancouversun.com/news/local-news/bike-theft [Accessed 23 Nov. 2018]
+
+2. *Vancouver Crime Data*, data.vancouver.ca. [Online] Available at: https://data.vancouver.ca/datacatalogue/crime-data.htm [Accessed 16 Nov. 2018]

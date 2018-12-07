@@ -23,22 +23,41 @@ Full report can be found here:
 
 ## Reproducing the analysis
 
-### Running `make all`
+### Running it using `make all`
 
 1. Clone this repo or download it. Navigate to the directory using `cd` in your terminal. 
 2. To clean the folder of the files (images, csv) from previous analyses, run `make clean`
 3. Run the `make all` command at the terminal to produce the report with the analysis.
 
+### Running it under Docker
+
+1.Clone/download this repository.
+2.Use the command line on your computer to get the [vancouver_bike_theft_analysis image](https://hub.docker.com/r/jamienie/vancouver_bike_theft_analysis/) from [DockerHub](https://hub.docker.com/)
+```
+docker pull jamienie/vancouver_bike_theft_analysis
+```
+3.use the command line to navigate to the root of this project on your computer.
+4.Type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).   
+```
+docker run --rm -e PASSWORD="test" -v <Path_on_your_computer>:/home/rstudio/vancouver_bike_theft_analysis/vancouver_bike_theft_analysis make -C '/home/rstudio/vancouver_bike_theft_analysis' all
+```
+3.To clean up the analysis(if needed), type:
+
+```
+docker run --rm -e PASSWORD="test" -v <Path_on_your_computer>:/home/rstudio/vancouver_bike_theft_analysis/vancouver_bike_theft_analysis make -C '/home/rstudio/vancouver_bike_theft_analysis' clean
+```
+
 ## Dependency Diagram
 
-![Dependency Diagram](doc/dependency_diagram.png)
+![Dependency Diagram](./doc/dependency_diagram.png)
 
 ## Dependencies
 - R 3.5.1 & libraries:
-	- 'rmarkdown==1.10'
-	- 'here==0.1.11'
-	- 'knitr==1.20'
-	- 'ggplot2==3.0.0'
-	- 'tidyverse==1.2.1'
-	- 'broom==0.5.0'
-	- 'forcats==0.3.0'
+
+| Library | Version|
+|---------|--------|
+| "rmarkdown" | "1.10" |
+| "here" | "0.1.11" |
+| "knitr" | "1.20" |
+| "ggplot2" | "3.0.0" |
+| "tidyverse" | "1.2.1" |
