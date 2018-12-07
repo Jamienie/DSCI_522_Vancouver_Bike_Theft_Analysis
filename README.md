@@ -29,10 +29,7 @@ Full report can be found here:
 2. To clean the folder of the files (images, csv) from previous analyses, run `make clean`
 3. Run the `make all` command at the terminal to produce the report with the analysis.
 
-## Dependency Diagram
-
-![Dependency Diagram](doc/dependency_diagram.png)
-### Running it using Docker`
+### Running it using Docker
 
 1.Clone/download this repository, use the command line to navigate to the root of this project on your computer.
 2.Type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).   
@@ -40,11 +37,15 @@ Full report can be found here:
 ```
 docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/data_analysis_eg ttimbers/data_analysis_pipeline_eg make -C '/home/data_analysis_eg' all
 ```
-3.To clean up the analysis type:
+3.To clean up the analysis(if needed), type:
 
 ```
 docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/data_analysis_eg ttimbers/data_analysis_pipeline_eg make -C '/home/data_analysis_eg' clean
 ```
+
+## Dependency Diagram
+
+![Dependency Diagram](doc/dependency_diagram.png)
 
 ## Dependencies
 - R 3.5.1 & libraries:
@@ -56,4 +57,3 @@ docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/data_analysis_eg ttimbers/data_an
 | "knitr" | "1.20" |
 | "ggplot2" | "3.0.0" |
 | "tidyverse" | "1.2.1" |
-| "broom" | "0.5.0" |
