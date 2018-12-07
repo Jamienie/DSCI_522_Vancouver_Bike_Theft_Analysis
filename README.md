@@ -49,7 +49,7 @@ docker run --rm -e PASSWORD="test" -v <Path_on_your_computer>:/home/rstudio/vanc
 
 ## Dependency Diagram
 
-![Dependency Diagram](./doc/dependency_diagram.png)
+![Dependency Diagram](https://github.com/UBC-MDS/Vancouver_Bike_Theft_Analysis/blob/master/doc/dependency_diagram.png)
 
 ## Dependencies
 - R 3.5.1 & libraries:
