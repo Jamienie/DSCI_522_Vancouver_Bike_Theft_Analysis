@@ -23,7 +23,7 @@ Full report can be found here:
 
 ## Reproducing the analysis
 
-### Running `make all`
+### Running it using `make all`
 
 1. Clone this repo or download it. Navigate to the directory using `cd` in your terminal. 
 2. To clean the folder of the files (images, csv) from previous analyses, run `make clean`
@@ -32,6 +32,19 @@ Full report can be found here:
 ## Dependency Diagram
 
 ![Dependency Diagram](doc/dependency_diagram.png)
+### Running it using Docker`
+
+1.Clone/download this repository, use the command line to navigate to the root of this project on your computer.
+2.Type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).   
+
+```
+docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/data_analysis_eg ttimbers/data_analysis_pipeline_eg make -C '/home/data_analysis_eg' all
+```
+3.To clean up the analysis type:
+
+```
+docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/data_analysis_eg ttimbers/data_analysis_pipeline_eg make -C '/home/data_analysis_eg' clean
+```
 
 ## Dependencies
 - R 3.5.1 & libraries:
