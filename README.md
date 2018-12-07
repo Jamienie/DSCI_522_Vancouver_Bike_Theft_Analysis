@@ -32,15 +32,21 @@ Full report can be found here:
 ### Running it under Docker
 
 1.Clone/download this repository.
+
 2.Use the command line on your computer to get the [vancouver_bike_theft_analysis image](https://hub.docker.com/r/jamienie/vancouver_bike_theft_analysis/) from [DockerHub](https://hub.docker.com/)
+
 ```
 docker pull jamienie/vancouver_bike_theft_analysis
 ```
+
 3.use the command line to navigate to the root of this project on your computer.
-4.Type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).   
+
+4. Navigate to the root of this project and type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).   
+
 ```
 docker run --rm -e PASSWORD="test" -v <Path_on_your_computer>:/home/rstudio/vancouver_bike_theft_analysis/vancouver_bike_theft_analysis make -C '/home/rstudio/vancouver_bike_theft_analysis' all
 ```
+
 3.To clean up the analysis(if needed), type:
 
 ```
@@ -56,8 +62,8 @@ docker run --rm -e PASSWORD="test" -v <Path_on_your_computer>:/home/rstudio/vanc
 
 | Library | Version|
 |---------|--------|
-| "rmarkdown" | "1.10" |
-| "here" | "0.1.11" |
-| "knitr" | "1.20" |
-| "ggplot2" | "3.0.0" |
-| "tidyverse" | "1.2.1" |
+| rmarkdown | "1.10" |
+| here | "0.1.11" |
+| knitr | "1.20" |
+| ggplot2 | "3.0.0" |
+| tidyverse | "1.2.1" |
