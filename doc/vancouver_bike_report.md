@@ -38,7 +38,7 @@ So we defined our null and alternative hypotheses (a one-tailed two-group hypoth
 
 -   Alternative hypothesis *H*<sub>*A*</sub>: Higher number of bike theft reports in the summer months when compared to the other months of the year.
 
-Our exploratory variable is the binary variable, **â€˜Summerâ€™** or **â€˜Not Summerâ€™**
+Our exploratory variable is the binary variable, **‘Summer’** or **‘Not Summer’**
 
 To test whether there is a statistically significant difference between the summer and non-summer groups, we used a **t-test** on the difference in means between the two groups. We assume the variances between the two groups are not equal.
 
