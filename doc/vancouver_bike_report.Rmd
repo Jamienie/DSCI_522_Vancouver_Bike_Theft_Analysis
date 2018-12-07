@@ -53,13 +53,14 @@ suppressPackageStartupMessages(library(tidyverse))
 
 ```{r echo=FALSE}
 summary <- read.csv("results/analysis_summary.csv")
-summary <- summary %>%
-  select("t statistic" = statistic, p.value, method, alternative)
-print(summary)
+#summary <- summary %>%
+#  select("t statistic" = statistic, p.value, method, alternative)
+knitr::kable(x=summary[2:10],row.names = FALSE)
 ```
+
 **Table 1**: Summary of t-test results
 
-As we can see from the summary table above, the p-value is infinitesmally small. Thus the null hypothesis is rejected and we can say with confidence that there is a higher incidence of bike thefts in the summer time. Figure 2 below highlights the differences between the two groups.
+As we can see from the summary table above, the difference in the mean estimates between the groups is substantially large. The p-value is infinitesmally small, and the null hypothesis is rejected. Thus, we can conclude with confidence that there is a higher incidence of bike thefts in the summer time. Figure 2 below highlights the differences between the two groups.
 
 ```{r, out.width="60%",include=TRUE,echo=FALSE}
 knitr::include_graphics("../results/figures/bike_boxplot.png")
