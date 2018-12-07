@@ -60,8 +60,8 @@ docker run --rm -e PASSWORD="test" -v <Path_on_your_computer>:/home/rstudio/vanc
 
 | Library | Version|
 |---------|--------|
-| rmarkdown | "1.10" |
-| here | "0.1.11" |
-| knitr | "1.20" |
-| ggplot2 | "3.0.0" |
-| tidyverse | "1.2.1" |
+| "rmarkdown" | "1.10" |
+| "here" | "0.1.11" |
+| "knitr" | "1.20" |
+| "ggplot2" | "3.0.0" |
+| "tidyverse" | "1.2.1" |
