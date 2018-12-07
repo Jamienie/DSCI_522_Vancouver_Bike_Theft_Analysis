@@ -4,7 +4,7 @@
 # use rocker/tidyverse as the base image and
 FROM rocker/tidyverse
 
-# install the cowsay package
+# install the here package
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   && install2.r --error \
     --deps TRUE \
