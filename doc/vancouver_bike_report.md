@@ -62,8 +62,12 @@ two-group hypothesis) as:
   - Alternative hypothesis \(H_A\): Higher number of bike theft reports
     in the summer months when compared to the other months of the year.
 
+<<<<<<< HEAD
+Our exploratory variable is the binary variable, **‘Summer’** or **‘Not Summer’**
+=======
 Our exploratory variable is the binary variable, **‘Summer’** or **‘Not
 Summer’**
+>>>>>>> upstream/master
 
 To test whether there is a statistically significant difference between
 the summer and non-summer groups, we used a **t-test** on the difference
