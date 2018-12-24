@@ -2,7 +2,7 @@
 Analysis of bike theft reports in Vancouver between 2003-2017.
 
 ### Team Members | Github:
-* Fan Nie | [Jamienie](https://github.com/Jamienie)
+* Fan Nie | [Jamienie](https://github.com/Jamienie?tab=repositories)
 * Mohamad Makkaoui | [makka3](https://github.com/makka3)
 
 ## Introduction & Objective
